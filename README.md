@@ -5,6 +5,19 @@ This simple library and program allows you to remotely take a picture using a So
 
 To use this program, you need to have Node.js installed on your computer.
 
+```
+npm update
+node takepic.js
+```
+
+### Network
+
+Since I was using one eth0 connection and another wlan0 connection to the Sony QX-10, I need to specify a route to the address 239.255.255.250
+
+```
+route add -host 239.255.255.250 gw 10.0.0.1
+```
+
 Click on the picture below to watch a short video on how to use this:
 [![How this works](http://img.youtube.com/vi/HKjiKA-p6a0/0.jpg)](http://www.youtube.com/watch?v=HKjiKA-p6a0)
 

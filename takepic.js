@@ -30,6 +30,7 @@ function takePicture() {
 }
 
 sony.discover(function(err, data) {
+    console.log('sony.discover', data);
 	if(data && data.length > 0) {
 		device = data[0];
 		device.startRecMode(function(err, response) {
@@ -37,7 +38,9 @@ sony.discover(function(err, data) {
 				takePicture();
 			});
 		});
-	}
+	} else {
+        console.log('sony.discover', err, data);
+    }
 }, 2000);
 
 process.on('SIGINT', function() {
